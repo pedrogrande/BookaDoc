@@ -1,0 +1,47 @@
+<%= simple_form_for(@patient_profile) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :first_name %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :last_name %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :phone %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :medicare_number %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <%= f.input :address %>
+    </div>
+    <div class="col-md-3">
+      <%= f.input :suburb %>
+    </div>
+  
+
+<div class="col-md-2">
+    <%= f.input :state %>
+    </div>
+    <div class="col-md-2">
+    <%= f.input :postcode %>
+    </div>
+      <div class="col-md-2">
+    <%= f.input :country, priority:['Australia'] %>
+    </div>
+
+
+  <div class="row">
+  <div class="col-md-4">
+    <%= f.button :submit %>
+  </div>
+  </div>
+<% end %>
